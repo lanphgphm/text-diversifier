@@ -5,6 +5,6 @@ project function: text diversifier.
 
 'with attitude' is an effort to make texting more expressive. this is achieved via emojis insertion and letter case manipulation. 
 
-special thanks to Nguyễn Thành Đô & Nguyễn Hoàng Ân.
+project in collaboration with Nguyễn Thành Đô & Nguyễn Hoàng Ân.
 
 latest changes: mar 19, 2022.
