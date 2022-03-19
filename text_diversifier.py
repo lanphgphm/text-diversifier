@@ -1,4 +1,5 @@
 import random
+import pyperclip
 
 '''
 THIS PROGRAM TRANSLATE HUMAN LANGUAGE INTO SELECTED ANIMAL LANGUAGES
@@ -32,6 +33,15 @@ def animal_translator():
     animal_string = ' '.join(animal_list)
     print(f'Your message in {key} language: {animal_string}')
 
+    # copy to clipboard
+    print("Copy to clipboard?")
+    copy_consent = input()
+    if copy_consent == 'Y':
+        pyperclip.copy(animal_string)
+        print("Message copied to clipboard.")
+    else: 
+        print("Message not copied to clipboard.")
+    
 '''
 THIS PROGRAM GIVES YOUR TEXT A PASSIVE AGGRESSIVE ATTITUDE BY ALTERNATING CASES
 '''
@@ -47,7 +57,16 @@ def mocking_string_editor():
             low_char = original_string[i]
             mocking_list.append(low_char)
     mocking_string = ''.join(mocking_list)
-    print(f"Here's your passive aggressive mocking text: {mocking_string}")
+    print(f"Here's your mocking text: {mocking_string}")
+    
+    # copy to clipboard
+    print("Copy to clipboard?")
+    copy_consent = input()
+    if copy_consent == 'Y':
+        pyperclip.copy(mocking_string)
+        print("Message copied to clipboard.")
+    else: 
+        print("Message not copied to clipboard.")
 
 '''
 THIS PROGRAM GIVES YOUR TEXT A BIT MORE ATTITUDE BY INSERTING EMOJIS
@@ -90,5 +109,16 @@ def fairy_text_editor():
         rand_index = random.randint(0, len(chosen_theme) - 1)
         fairy_text_list.append(original_list[i])
         fairy_text_list.append(chosen_theme[rand_index])
-    fairy_text = ' '.join(fairy_text_list)
+    fairy_text = ''.join(fairy_text_list)
     print(f"Here's your fairytext: {fairy_text}")
+    
+    # copy to clipboard
+    print("Copy to clipboard?")
+    copy_consent = input()
+    if copy_consent == 'Y':
+        pyperclip.copy(fairy_text)
+        print("Message copied to clipboard.")
+    else: 
+        print("Message not copied to clipboard.")
+
+fairy_text_editor()
