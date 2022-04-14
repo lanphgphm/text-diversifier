@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'text diversifier',
       home: Scaffold(
         appBar: AppBar(
-          title: const BoldHeader('text diversifier'),
+          title: const BoldHeader('a dumb app'),
           backgroundColor: AppColor.primRed,
         ),
         // ignore: avoid_unnecessary_containers

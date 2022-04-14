@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:text_diversifier/constants/colors.dart';
 import 'package:text_diversifier/constants/text_fonts.dart';
-import 'package:text_diversifier/widgets/check_box.dart';
 import 'package:text_diversifier/widgets/emoji_box.dart';
-
+import 'package:text_diversifier/helpers/emojis_options.dart';
+import 'package:text_diversifier/helpers/insert_options.dart';
 
 class LeftBar extends StatelessWidget {
   const LeftBar({Key? key}) : super(key: key);
@@ -16,32 +16,10 @@ class LeftBar extends StatelessWidget {
         color: AppColor.primGreen,
         child: Column(
           children: [
-            const CheckBox('themed emojis'),
-            const CheckBox('annotated emojis'),
-            const CheckBox('mocking text'),
+            InsertOptions(),
             SizedBox(height: 15),
             const LightHeader('emoji themes'),
-            Row(
-              children: [
-                SizedBox(width: 110, child: CheckBox('sparkle')),
-                SizedBox(width: 110, child: CheckBox('fairy')),
-                CheckBox('love'),
-              ],
-            ),
-            Row(
-              children: [
-                SizedBox(width: 110, child: CheckBox('hot')),
-                SizedBox(width: 110, child: CheckBox('cool')),
-                CheckBox('chaotic'),
-              ],
-            ),
-            Row(
-              children: [
-                SizedBox(width: 110, child: CheckBox('plant')),
-                SizedBox(width: 110, child: CheckBox('fruit')),
-                CheckBox('custom'),
-              ],
-            ),
+            EmojiOption(),
             SizedBox(height: 25),
             EmojiBox(),
           ],
