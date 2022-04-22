@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:text_diversifier/widgets/check_box.dart';
 
@@ -6,8 +8,10 @@ class InsertOptions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: const [
-      CheckBox('themed emojis'),
+    return Column(children: [
+      GestureDetector(
+          child: CheckBox('themed emojis'),
+          onTap: () {}),
       CheckBox('annotated emojis'),
       CheckBox('mocking text'),
     ]);

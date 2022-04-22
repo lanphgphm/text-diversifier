@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:text_diversifier/constants/text_fonts.dart';
 import 'package:text_diversifier/constants/colors.dart';
+import 'package:text_diversifier/helpers/fairy_text.dart';
 import 'package:text_diversifier/widgets/text_box.dart';
-
+import '../helpers/mocking_string.dart';
 
 class MainRightBar extends StatelessWidget {
   const MainRightBar({Key? key}) : super(key: key);
@@ -29,7 +30,11 @@ class MainRightBar extends StatelessWidget {
                         child: BoldBodyLarge('Copy'),
                         style:
                             ElevatedButton.styleFrom(primary: AppColor.primRed),
-                        onPressed: () {},
+                        onPressed: () {
+                          mockingStringGenerator('ban la nhat, nhat ban roi.');
+                          fairytextEditor(
+                              'twinkle twinkle little star, hit me over with a car.');
+                        },
                       ))),
               TextBox(),
               Spacer()
